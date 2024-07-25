@@ -16,3 +16,7 @@
 .hover-nav {
   @apply md:rounded-full md:hover:bg-gray-200 md:dark:hover:bg-neutral-700
 }
+
+.gradient-text {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 w-fit mask
+}

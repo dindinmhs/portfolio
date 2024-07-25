@@ -12,16 +12,16 @@ export const site = {
             path : "#about"
         },
         {
-            name : "Skills",
-            path : "#skills"
-        },
-        {
             name : "Project",
             path : "#project"
         },
         {
-            name : "Gallery",
-            path : "#gallery"
+            name : "Academy",
+            path : "#academy"
+        },
+        {
+            name : "Contact",
+            path : "#contact"
         },     
     ]
 }

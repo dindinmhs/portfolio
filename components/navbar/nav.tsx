@@ -10,7 +10,7 @@ import { Menu } from "./menu"
 export const Nav = () => {
     const [isOpen, setOpen] = useState(false)
     return (
-        <header className={`flex justify-between px-10 items-center py-2 right-0 left-0 z-40 ${isOpen?"fixed":"absolute"}`}>
+        <header className={`flex justify-between px-10 items-center py-2 bg-gray-50 dark:bg-neutral-800 right-0 left-0 z-40 ${isOpen?"fixed":"absolute"}`}>
             <Link href="/" className={`text-2xl font-black bg-gradient-to-l from-purple-600 to-pink-600 mask`}>
                 <motion.h1 className="">
                     {site.logo}

@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body className={`${ubuntu.className} bg-gray-50 dark:text-fontDark dark:bg-neutral-800`}>{children}</body>
     </html>
   );

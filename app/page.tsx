@@ -3,33 +3,18 @@ import { Nav } from "@/components/navbar/nav";
 import { Homepage } from "@/components/home/home";
 import { useEffect, useState } from "react";
 import { About } from "@/components/about/about";
+import { Project } from "@/components/project/project";
 
 
 export default function Home() {
-  // const [imageURL, setImageURL] = useState<string[] | undefined>()
-  // useEffect(()=>{
-  //   const fetchImage = async () => {
-  //     try {
-  //       const res = await fetch('/api/getskills')
-  //       if (!res.ok) {
-  //         throw new Error(`HTTP error! status: ${res.status}`);
-  //       }
-  //       const data = await res.json()
-  //       setImageURL(data)
-  //     } catch (error) {
-  //       console.error(error)
-  //     }
-  //   }
-  //   fetchImage()
-  // },[])
-  // useEffect(()=>{
-  //   console.log(imageURL)
-  // },[imageURL])
   return (
     <>
       <Nav/>
-      <Homepage/>
-      <About/>
+        <Homepage/>
+      <div className="max-w-[70rem] mx-auto px-6">
+        <About/>
+        <Project/>
+      </div>
     </>
   );
 }
