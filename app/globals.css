@@ -20,3 +20,7 @@
 .gradient-text {
   @apply bg-gradient-to-r from-purple-600 to-pink-600 w-fit mask
 }
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600
+}
