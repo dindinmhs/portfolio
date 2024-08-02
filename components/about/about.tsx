@@ -1,9 +1,12 @@
+import { useVisibility } from "@/app/page";
 import { Introduce } from "./introduce";
 import { Techs } from "./tech";
+import { motion } from "framer-motion";
 
 export const About = () => {
+    const { setVisible } = useVisibility()
     return (
-        <section id="about" className="text-lg mx-auto py-6">
+        <motion.section onViewportEnter={()=>setVisible(1)} viewport={{amount:0.5, once : false}} id="about" className="text-lg mx-auto py-6">
             <div className="flex mb-4 gap-4">
                 <h2 className="font-black text-5xl gradient-text">About</h2>
                 <div className="h-[1px] self-center bg-gradient-to-l from-purple-600 to-pink-600  w-full"></div>
@@ -12,6 +15,6 @@ export const About = () => {
                 <Introduce/>
                 <Techs/>
             </div>
-        </section>
+        </motion.section>
     )
 };

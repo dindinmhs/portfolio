@@ -1,11 +1,11 @@
 import { motion, useMotionValue } from "framer-motion";
 import { IoClose } from "react-icons/io5";
-import { FaClosedCaptioning, FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
 import { DocumentData } from "firebase/firestore";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 const DRAG_BUFFER = 50
 

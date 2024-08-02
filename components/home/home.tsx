@@ -1,16 +1,19 @@
 "use client"
+import { useVisibility } from "@/app/page";
 import { Hero } from "./hero";
 import { Word } from "./word";
+import { motion } from "framer-motion";
 
 export const Homepage = () => {
+    const {setVisible} = useVisibility()
     return (
-        <section id="home" className="grid grid-cols-1 lg:grid-cols-2 h-[47rem] place-items-center">
-            <div className="w-fit h-fit items-center order-2 lg:order-1 place-self-start md:place-self-center mx-auto">
+        <motion.section id="home" className="grid grid-cols-1 lg:grid-cols-2 h-[47rem] place-items-center">
+            <motion.div onViewportEnter={()=>setVisible(0)} viewport={{amount:0.5, once : false}} className="w-fit h-fit items-center order-2 lg:order-1 place-self-start md:place-self-center mx-auto">
                 <Word/>
-            </div>
+            </motion.div>
             <div className="p-[2rem] lg:p-[8rem] overflow-hidden order-1 lg:order-2 mt-4 lg:my-0">
                 <Hero/>
             </div>
-        </section>
+        </motion.section>
     )
 };
