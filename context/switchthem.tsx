@@ -1,5 +1,4 @@
-// app/context/ThemeContext.js
-'use client'; // Menentukan bahwa ini adalah komponen sisi klien
+'use client'; 
 import { createContext, useContext, useState, Dispatch, SetStateAction} from 'react';
 
 interface ThemeContextType {
@@ -12,7 +11,7 @@ const ThemeContext = createContext<ThemeContextType>({
     setAnimate : () => {}
 });
 
-export function ModeState({ children }:any) {
+export function ModeState({ children }:{children:React.ReactNode}) {
   const [isAnimate, setAnimate] = useState(false);
 
   return (
