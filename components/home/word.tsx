@@ -52,9 +52,9 @@ export const Word = () => {
     },[])
     return (
         <div className="text-2xl md:text-4xl">
-            <h3>Hi i'm</h3>
+            <h3>Hi i&apos;m</h3>
             <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-l from-purple-600 to-pink-600 mask">Dindin Imanudin</h2>
-            <h3>I'm a <span className={`${ubuntu_mono.className} ${
+            <h3>I&apos;m a <span className={`${ubuntu_mono.className} ${
                     number === 0 ? "text-purple-500" :
                     number === 1 ? "text-pink-500" :
                     number === 2 ? "text-green-500" :

@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { motion, MotionConfig, useAnimate } from "framer-motion"
-import { useEffect } from "react";
+import { motion, MotionConfig } from "framer-motion"
 
 export const Hero = () => {
     return (
