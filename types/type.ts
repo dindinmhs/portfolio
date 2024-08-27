@@ -14,3 +14,12 @@ export interface TechType {
     common : string[];
     other : string[];
 }
+
+export interface AcademyType {
+    start_year : string;
+    end_year : string;
+    name : string;
+    study : string;
+    desc : string;
+    logo : string;
+}

@@ -5,8 +5,8 @@ import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { More } from "./more";
-import { useVisibility } from "@/app/page";
 import { ProjectType } from "@/types/type";
+import { useVisibility } from "@/context/select";
 
 export const Project = ({projects}:any) => {
     const [isSelected, setSelected] = useState<ProjectType>()

@@ -6,7 +6,8 @@ import { ThemeToggle } from "./themetoggle"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { Menu } from "./menu"
-import { useVisibility } from "@/app/page"
+import { useVisibility } from "@/context/select"
+
 
 export const Nav = () => {
     const [isOpen, setOpen] = useState(false)

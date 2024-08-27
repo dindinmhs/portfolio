@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
-import { ReactQuery } from "@/context/switchthem copy";
+import { ReactQuery } from "@/context/reactquery";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight : ["400","500","700"] });
 

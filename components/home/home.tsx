@@ -1,5 +1,5 @@
 "use client"
-import { useVisibility } from "@/app/page";
+import { useVisibility } from "@/context/select";
 import { Hero } from "./hero";
 import { Word } from "./word";
 import { motion } from "framer-motion";

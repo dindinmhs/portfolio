@@ -1,4 +1,4 @@
-import { useVisibility } from "@/app/page";
+import { useVisibility } from "@/context/select";
 import { Introduce } from "./introduce";
 import { Techs } from "./tech";
 import { motion } from "framer-motion";
