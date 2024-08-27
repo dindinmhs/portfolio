@@ -1,0 +1,23 @@
+export const Timeline = ({data}:any) => {
+    const middleIndex = Math.floor(data.length / 2);
+    return (
+        <>
+            {data.map((academy : any, idx : number)=>(
+                <div key={idx} className={`${idx%2===0?"flex-row-reverse":"flex-row"} flex md:contents text-black dark:text-white`}>
+                    <div className={`${idx%2===0?`col-start-1 col-end-5 order-${idx+idx+1}`:`order-${idx+idx+2} col-start-6 col-end-10`} dark:bg-neutral-700 bg-gray-200 p-4 rounded-xl my-4`}>
+                        <small className="font-bold">{academy.start_year===academy.end_year?academy.start_year:`${academy.start_year} - ${academy.end_year}`}</small>
+                        <h3 className="font-black text-2xl mb-1 gradient-text">{academy.name}</h3>
+                        <h4 className="font-semibold text-lg mb-1">{academy.study}</h4>
+                        <p className="leading-tight text-justify">{academy.desc}</p>
+                    </div>
+                    <div className={`${idx%2===0?`order-${idx+idx+2}`:`order-${idx+idx+1}`} col-start-5 col-end-6 md:mx-auto relative mr-10`}>
+                        <div className="h-full w-6 flex items-center justify-center">
+                            <div className={`${idx===middleIndex?"bg-gradient-to-b from-purple-600 to-pink-600":idx<middleIndex?"bg-purple-600":"bg-pink-600"} h-full w-1 pointer-events-none`}/>
+                        </div>
+                        <div className={`${idx===middleIndex?"bg-gradient-to-b from-purple-700 to-pink-700":idx<middleIndex?"bg-purple-700":"bg-pink-700"} w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow-lg`}/>
+                    </div>
+                </div>
+            ))}
+        </>
+    )
+};

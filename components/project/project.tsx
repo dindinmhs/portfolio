@@ -13,7 +13,7 @@ export const Project = ({projects}:any) => {
     const { setVisible } = useVisibility()
     
     return (
-        <motion.section onViewportEnter={()=>setVisible(2)} viewport={{amount:0.5, once : false}} id="project" className="">
+        <motion.section onViewportEnter={()=>setVisible(2)} viewport={{amount:0.5, once : false}} id="project" className="py-10">
             <div className="flex mb-4 gap-4">
                 <div className="h-[1px] self-center bg-gradient-to-l from-purple-600 to-pink-600  w-full"></div>
                 <h2 className="font-black text-5xl gradient-text">Projects</h2>
