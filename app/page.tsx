@@ -8,6 +8,7 @@ import { useProjects } from "@/request/project";
 import { Loading } from "./load";
 import { Academy } from "@/components/academy/academy";
 import { visibilityContext } from "@/context/select";  // Import di sini
+import { Contact } from "@/components/contact/contact";
 
 export default function Home() {
   const [visible, setVisible] = useState(0);
@@ -24,6 +25,7 @@ export default function Home() {
           <About />
           {data && <Project projects={data} />}
           <Academy />
+          <Contact/>
         </div>
       </visibilityContext.Provider>
     </>

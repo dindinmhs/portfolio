@@ -14,7 +14,7 @@ export const Timeline = ({ data }:{ data : AcademyType[] }) => {
                         <h4 className="font-semibold text-lg mb-1">{academy.study}</h4>
                         <p className="leading-tight text-justify">{academy.desc}</p>
                     </div>
-                    <div className={`${idx%2===0?`order-2`:`order-1`} col-start-5 col-end-6 md:mx-auto relative mr-10`}>
+                    <div className={`order-1 col-start-5 col-end-6 md:mx-auto relative mr-10`}>
                         <div className="h-full w-10 flex items-center justify-center">
                             <div className={`${idx===middleIndex?"bg-gradient-to-b from-purple-600 to-pink-600":idx<middleIndex?"bg-purple-600":"bg-pink-600"} h-full w-1 pointer-events-none`}/>
                         </div>

@@ -4,23 +4,6 @@ import { Timeline } from "./timeline";
 import { useVisibility } from "@/context/select";
 import { useAcademy } from "@/request/academy";
 
-// const data = [
-//     {
-//         start_year : "2023",
-//         end_year : "2027",
-//         name : "Itenas",
-//         study : "Informatics",
-//         desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius totam quos doloribus earum. Aliquam tempora vero saepe cupiditate accusantium itaque iusto voluptatibus enim voluptatem laborum? Vel quas cum in doloribus."
-//     },
-//     {
-//         start_year : "2024",
-//         end_year : "2024",
-//         name : "Compfest",
-//         study : "Software Engineer Academy",
-//         desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius totam quos doloribus earum. Aliquam tempora vero saepe cupiditate accusantium itaque iusto voluptatibus enim voluptatem laborum? Vel quas cum in doloribus."
-//     },
-// ]
-
 export const Academy = () => {
     const { setVisible } = useVisibility()
     const { data } = useAcademy()
