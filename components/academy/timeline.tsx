@@ -3,7 +3,6 @@ import Image from "next/image";
 
 export const Timeline = ({ data }:{ data : AcademyType[] }) => {
     const middleIndex = Math.floor(data.length / 2);
-    console.log(data)
     return (
         <>
             {data.map((academy : AcademyType, idx : number)=>(

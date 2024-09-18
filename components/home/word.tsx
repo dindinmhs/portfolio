@@ -44,10 +44,12 @@ export const Word = () => {
     }
 
     const stopScramble = () => {
+        console.log('stop scrumble')
         clearInterval(intervalRef.current || undefined);
         setText(text);
       };
     useEffect(()=>{
+        console.log('start scrumble')
         scramble()
     },[])
     return (
