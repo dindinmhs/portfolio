@@ -23,5 +23,10 @@ export const site = {
             name : "Contact",
             path : "#contact"
         },     
-    ]
+    ],
+    contact : {
+        instagram : "https://www.instagram.com/dindin.14/",
+        linkedin : "https://www.linkedin.com/in/dindinimanudin14/",
+        github : "https://github.com/dindinmhs",
+    }
 }

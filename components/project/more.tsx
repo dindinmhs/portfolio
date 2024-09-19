@@ -47,7 +47,7 @@ export const More = ({isSelected, setSelected} : Props) => {
                     style={{ x : dragX }}
                     animate={{ translateX : `-${imgIdx*100}%` }}>
                         {isSelected.images.map((url:string, idx:number) => (
-                            <div key={idx} className="shrink-0 w-full relative h-[23rem]">
+                            <div key={idx} className="shrink-0 w-full relative h-[10rem] sm:h-[18rem] md:h-[23rem]">
                                 <Image
                                     src={url}
                                     alt={isSelected.name}
@@ -81,11 +81,11 @@ export const More = ({isSelected, setSelected} : Props) => {
                     </ul>
                     <h2 className="text-2xl font-bold gradient-text mb-2 mt-6">Project Links</h2>
                     <div className="flex gap-2">
-                        <Link target="_blank" href={isSelected.github} className="flex gap-1 items-center">
+                        <Link target="_blank" href={isSelected.github} className="flex gap-1 items-center hover:text-purple-500 duration-75">
                             <FaGithub size={20}/>
                             <p>Source Code</p>
                         </Link>
-                        <Link target="_blank" href={isSelected.link} className="flex gap-1 items-center">
+                        <Link target="_blank" href={isSelected.link} className="flex gap-1 items-center hover:text-purple-500 duration-75">
                             <FiExternalLink size={20}/>
                             <p>Live Project</p>
                         </Link>

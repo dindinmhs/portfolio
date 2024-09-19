@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Ubuntu_Mono } from "next/font/google";
+import { Reveal } from "../reveal/reveal";
 
 const ubuntu_mono = Ubuntu_Mono({ subsets: ["latin"], weight: "700" });
 
@@ -55,26 +56,32 @@ export const Word = () => {
 
     return (
         <div className="text-2xl md:text-4xl">
-            <h3>Hi i&apos;m</h3>
-            <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-l from-purple-600 to-pink-600 mask">
-                Dindin Imanudin
-            </h2>
-            <h3>
-                I&apos;m a{" "}
-                <span
-                    className={`${ubuntu_mono.className} ${
-                        number === 0
-                            ? "text-purple-500"
-                            : number === 1
-                            ? "text-pink-500"
-                            : number === 2
-                            ? "text-green-500"
-                            : "text-sky-500"
-                    }`}
-                >
-                    {text}
-                </span>
-            </h3>
+            <Reveal>
+                <h3>Hi i&apos;m</h3>
+            </Reveal>
+            <Reveal>
+                <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-l from-purple-600 to-pink-600 mask">
+                    Dindin Imanudin
+                </h2>
+            </Reveal>
+            <Reveal>
+                <h3>
+                    I&apos;m a{" "}
+                    <span
+                        className={`${ubuntu_mono.className} ${
+                            number === 0
+                                ? "text-purple-500"
+                                : number === 1
+                                ? "text-pink-500"
+                                : number === 2
+                                ? "text-green-500"
+                                : "text-sky-500"
+                        }`}
+                    >
+                        {text}
+                    </span>
+                </h3>
+            </Reveal>
         </div>
     );
 };
