@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export const Homepage = () => {
     const {setVisible} = useVisibility()
     return (
-        <motion.section id="home" className="grid grid-cols-1 lg:grid-cols-2 h-[47rem] place-items-center">
+        <motion.section id="home" className="grid grid-cols-1 lg:grid-cols-2 h-[50rem] place-items-center">
             <motion.div onViewportEnter={()=>setVisible(0)} viewport={{amount:0.5, once : false}} className="w-fit h-fit items-center order-2 lg:order-1 place-self-start md:place-self-center mx-auto">
                 <Word/>
             </motion.div>

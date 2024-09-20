@@ -7,7 +7,7 @@ import { Reveal } from "../reveal/reveal";
 export const About = () => {
     const { setVisible } = useVisibility()
     return (
-        <motion.section onViewportEnter={()=>setVisible(1)} viewport={{amount:0.5, once : false}} id="about" className="text-lg mx-auto py-6">
+        <motion.section onViewportEnter={()=>setVisible(1)} viewport={{amount:0.5, once : false}} id="about" className="text-lg mx-auto pb-16">
             <Reveal style="w-full">
                 <div className="flex mb-4 gap-4">
                     <h2 className="font-black text-5xl gradient-text">About</h2>

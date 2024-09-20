@@ -10,7 +10,7 @@ export const Contact = () => {
     const { setVisible } = useVisibility()
     
     return (
-        <motion.section id="contact" onViewportEnter={()=>setVisible(4)} viewport={{amount:0.5, once : false}}>
+        <motion.section id="contact" onViewportEnter={()=>setVisible(4)} viewport={{amount:0.5, once : false}} className="pb-16">
             <Reveal style="w-full">
                 <div className="flex mb-4 gap-4">
                     <div className="h-[1px] self-center bg-gradient-to-l from-purple-600 to-pink-600  w-full"></div>
