@@ -12,16 +12,18 @@ export const Word = () => {
     const intervalRef = useRef<any>(null);
     const [number, setNumber] = useState(0);
     const [text, setText] = useState(job[jobIdxRef.current]);
+    const [pos, setPos] = useState(0); // To keep track of the scrambling position
 
     const scramble = () => {
-        let pos = 0;
         intervalRef.current = setInterval(() => {
-            const scrambled = job[jobIdxRef.current].split("")
+            let currentJob = job[jobIdxRef.current];
+            const scrambled = currentJob.split("")
                 .map((char, index) => {
                     if (pos / 2 > index) {
-                        return char;
+                        return char; // Keep correct characters in place
                     }
 
+                    // Otherwise, replace with a random character
                     const randomCharIndex = Math.floor(Math.random() * charRandom.length);
                     const randomChar = charRandom[randomCharIndex];
 
@@ -29,31 +31,25 @@ export const Word = () => {
                 })
                 .join("");
 
-            setText(scrambled);
-            pos++;
+            setText(scrambled); // Update the displayed text
+            setPos((prevPos) => prevPos + 1); // Increment position
 
-            if (pos >= job[jobIdxRef.current].length * 4) {
-                jobIdxRef.current++;
-                if (jobIdxRef.current >= job.length) {
-                    jobIdxRef.current = 0;
-                }
+            if (pos >= currentJob.length * 4) { // Once scrambling is done
+                jobIdxRef.current = (jobIdxRef.current + 1) % job.length; // Move to the next job
                 setNumber(jobIdxRef.current);
-                pos = 0;
-                stopScramble();
+                setPos(0); // Reset position for the next job
+                setText(job[jobIdxRef.current]); // Set the actual job name as the text
             }
         }, 100);
     };
 
-    const stopScramble = () => {
-        console.log('stop')
-        clearInterval(intervalRef.current || undefined);
-        setText(job[jobIdxRef.current]); 
-    };
-
     useEffect(() => {
-        console.log("start scramble");
-        scramble();
-    }, []);
+        scramble(); // Start the scramble process on mount
+
+        return () => {
+            clearInterval(intervalRef.current); // Cleanup interval when component unmounts
+        };
+    }, [pos]); // Re-run the effect if pos changes
 
     return (
         <div className="text-2xl md:text-4xl">
@@ -86,4 +82,5 @@ export const Word = () => {
         </div>
     );
 };
+
 
