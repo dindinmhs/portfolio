@@ -45,6 +45,7 @@ export const Word = () => {
     };
 
     const stopScramble = () => {
+        console.log('stop')
         clearInterval(intervalRef.current || undefined);
         setText(job[jobIdxRef.current]); 
     };

@@ -21,7 +21,7 @@ export const Contact = () => {
                 <div className="dark:bg-neutral-700 bg-gray-200 md:px-4 py-8 rounded-md  md:h-1/2 flex flex-col justify-center">
                     <Reveal>
                         <p className="text-lg text-center">
-                            Shoot me an email if you want to connect! You can also find me on <Link href={site.contact.linkedin} className="text-purple-500 hover:text-purple-600">Linkedin</Link> or <Link href={site.contact.instagram} className="text-purple-500 hover:text-purple-600">Instagram</Link> if that's more your   speed.
+                            Shoot me an email if you want to connect! You can also find me on <Link href={site.contact.linkedin} className="text-purple-500 hover:text-purple-600">Linkedin</Link> or <Link href={site.contact.instagram} className="text-purple-500 hover:text-purple-600">Instagram</Link> if that&apos;s more your   speed.
                             </p>
                     </Reveal>
                     <div className="mt-4 flex items-center gap-2 mx-auto">
