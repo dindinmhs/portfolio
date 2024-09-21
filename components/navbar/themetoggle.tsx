@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { MdDarkMode, MdWbSunny } from 'react-icons/md';
 import { useAnimate, motion } from 'framer-motion';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaMoon } from 'react-icons/fa';
 import { IoSunny } from 'react-icons/io5';
 
 
@@ -27,8 +27,12 @@ export const ThemeToggle = () => {
   }
 
   const handleToggle = () => {
+    document.body.style.overflow = 'hidden';
     setDarkMode(!darkMode);
     switchAnimate()
+    setTimeout(()=>{
+      document.body.style.overflow = 'visible';
+    },900)
   };
 
   return (
@@ -43,7 +47,7 @@ export const ThemeToggle = () => {
           ref={scope} 
           initial={{display : "none", opacity : 0}}
           style={darkMode ? { background : "black" } : { background : "white" }}
-          className="top-0 right-0 left-0 bottom-0 fixed z-50">
+          className="right-0 left-0 h-[100vh] translate-y-[46%] fixed z-50">
               <motion.div 
                 id='day'
                 initial={{y : "80%"}}

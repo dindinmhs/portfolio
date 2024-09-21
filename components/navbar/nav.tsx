@@ -37,9 +37,9 @@ export const Nav = () => {
             className={`flex justify-between px-10 items-center py-2 bg-gray-50 dark:bg-neutral-800 right-0 left-0 z-40 fixed`}
         >
                 <Link href="/" className={`text-2xl font-black bg-gradient-to-l from-purple-600 to-pink-600 mask`}>
-                    <motion.h1 className="">
+                    <h1>
                         {site.logo}
-                    </motion.h1>
+                    </h1>
                 </Link>
             <nav
                 className={`${isOpen?"translate-y-1/2":"-translate-y-[100vh]"} md:translate-y-0 duration-500 text-lg md:inline absolute h-[100vh] left-0 right-0 px-4 md:px-0 md:h-fit md:static pt-16 md:pt-0 bg-gray-50 dark:bg-neutral-800 -z-10 origin-top`}>

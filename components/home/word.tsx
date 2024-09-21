@@ -12,7 +12,7 @@ export const Word = () => {
     const intervalRef = useRef<any>(null);
     const [number, setNumber] = useState(0);
     const [text, setText] = useState(job[jobIdxRef.current]);
-    const [pos, setPos] = useState(0); // To keep track of the scrambling position
+    const [pos, setPos] = useState(0); 
 
     const scramble = () => {
         intervalRef.current = setInterval(() => {
@@ -20,10 +20,9 @@ export const Word = () => {
             const scrambled = currentJob.split("")
                 .map((char, index) => {
                     if (pos / 2 > index) {
-                        return char; // Keep correct characters in place
+                        return char; 
                     }
 
-                    // Otherwise, replace with a random character
                     const randomCharIndex = Math.floor(Math.random() * charRandom.length);
                     const randomChar = charRandom[randomCharIndex];
 
@@ -31,25 +30,25 @@ export const Word = () => {
                 })
                 .join("");
 
-            setText(scrambled); // Update the displayed text
-            setPos((prevPos) => prevPos + 1); // Increment position
+            setText(scrambled); 
+            setPos((prevPos) => prevPos + 1); 
 
-            if (pos >= currentJob.length * 4) { // Once scrambling is done
-                jobIdxRef.current = (jobIdxRef.current + 1) % job.length; // Move to the next job
+            if (pos >= currentJob.length * 4) { 
+                jobIdxRef.current = (jobIdxRef.current + 1) % job.length; 
                 setNumber(jobIdxRef.current);
-                setPos(0); // Reset position for the next job
-                setText(job[jobIdxRef.current]); // Set the actual job name as the text
+                setPos(0); 
+                setText(job[jobIdxRef.current]); 
             }
         }, 100);
     };
 
     useEffect(() => {
-        scramble(); // Start the scramble process on mount
+        scramble(); 
 
         return () => {
-            clearInterval(intervalRef.current); // Cleanup interval when component unmounts
+            clearInterval(intervalRef.current); 
         };
-    }, [pos]); // Re-run the effect if pos changes
+    }, [pos]); 
 
     return (
         <div className="text-2xl md:text-4xl">
